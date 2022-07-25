@@ -148,4 +148,9 @@ class AddTaskDialogFragment : DialogFragment() {
   private fun onTaskAddFailed() {
     this.activity?.toast("Something went wrong!")
   }
+
+  override fun onDestroyView() {
+    _binding = null
+    super.onDestroyView()
+  }
 }
